@@ -10,6 +10,9 @@ const schoolSchema = new Schema({
     image: {
         type: String,
     },
+    region: {
+        type: String,
+    }
 })
 
 const School = mongoose.model('School', schoolSchema);

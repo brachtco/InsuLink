@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+//add components as they are finished here:
 
 function App() {
   return (
