@@ -11,7 +11,7 @@ const typeDefs = gql`
     _id: ID
     firstName: String
     lastName: String
-    age: Number
+    age: Int
     gender: String
     bio: String
     interests: String
@@ -34,7 +34,7 @@ const typeDefs = gql`
     addUser(
       firstName: String!
       lastName: String!
-      age: Number
+      age: Int
       gender: String
       bio: String
       interests: String
@@ -45,7 +45,7 @@ const typeDefs = gql`
     updateUser(
       firstName: String
       lastName: String
-      age: Number
+      age: Int
       gender: String
       bio: String
       interests: String
