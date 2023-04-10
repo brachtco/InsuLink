@@ -39,3 +39,4 @@ class AuthService {
 }
 
 export default new AuthService();
+//Not sure if we need to address this error.
