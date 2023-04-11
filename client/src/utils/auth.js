@@ -38,5 +38,5 @@ class AuthService {
   }
 }
 
-export default new AuthService();
+export default AuthService();
 //Not sure if we need to address this error.
