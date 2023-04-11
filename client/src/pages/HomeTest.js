@@ -3,7 +3,7 @@ import React from 'react';
 function HomeTest() {
 
     return (
-        <div id="landingPage" style={{ height: "100vh", position: "relative" }}>
+        <div id="HomePage" style={{ height: "100vh", position: "relative" }}>
 
             <div style={{ display: "flex", justifyContent: "center"}}>
                 <h1>Homepage!</h1>
