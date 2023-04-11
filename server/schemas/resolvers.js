@@ -14,7 +14,7 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    schools: async () => {
+    school: async () => {
         return await School.find({}).populate('users');
       },
   },
