@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Header from "./components/Header";
+import Header from "./components/Header";
 import LandingPage from './pages/LandingPage';
 import HomeTest from './pages/HomeTest';
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 //add components as they are finished here:
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       {/* <Container style={{ height: "100vh", position: "relative" }} > */}
-        {/* <Header /> */}
+        <Header />
         <Routes>
           <Route
             path="/"
@@ -23,7 +23,7 @@ function App() {
             element={<HomeTest />}
           />          
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       {/* </Container> */}
     </Router>
   );
