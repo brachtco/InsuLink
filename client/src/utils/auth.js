@@ -38,5 +38,11 @@ class AuthService {
   }
 }
 
-export default AuthService();
+const myInstance = new AuthService();
+
+export {
+  myInstance, AuthService
+}
+
+//export default new AuthService();
 //Not sure if we need to address this error.

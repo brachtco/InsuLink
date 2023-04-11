@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Auth from '../utils/auth'
+import { myInstance } from '../utils/auth'
 
 const Header = () => {
     const logout = (event) => {
         event.preventDefault();
-        Auth.logout();
+        myInstance.logout();
     };
     return (
         <header>
@@ -19,7 +19,7 @@ const Header = () => {
                 </div>
             </div>
             <div>
-                {Auth.loggedIn() ? (
+                {myInstance.loggedIn() ? (
                   <>
                     <Link to='/homepage'>
                         Home
