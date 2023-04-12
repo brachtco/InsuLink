@@ -18,7 +18,6 @@ function UserProfile() {
     const [profileHobbies, setHobbies] = useState('');
     const [profileSmoke, setSmoke] = useState('');
     const [profileDrink, setDrink] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
 
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
@@ -29,6 +28,7 @@ function UserProfile() {
         // Defaulting these to "no" unless the user changes them to "yes".  Otherwise their default value won't be recognized by handleFormSubmit()
         setSmoke("no");
         setDrink("no");
+        setGender("female");
 
         // Based on the input type, we set the state of either email, username, and password
         if (inputType === 'profileName') {
@@ -60,22 +60,22 @@ function UserProfile() {
 
         // Check Name
         if (!profileName) {
-            setErrorMessage('Full name is required!');
+            alert('Full name is required!');
             return;
         }
         // Check Age
         else if (!profileAge) {
-            setErrorMessage('Age is required!');
+            alert('Age is required!');
             return;
         }
         // Check Hometown
         else if (!profileHometown) {
-            setErrorMessage('Hometown is required!');
+            alert('Hometown is required!');
             return;
         }
         // Check Hobbies
         else if (!profileHometown) {
-            setErrorMessage('Please enter at least 1 hobby!');
+            alert('Please enter at least 1 hobby!');
             return;
         } else {
             //TODO: Need to actually store this data in the database.
@@ -176,17 +176,11 @@ function UserProfile() {
 
                 </FormControl>
 
-                {errorMessage && (
-                    <div>
-                        <p className="error-text">{errorMessage}</p>
-                    </div>
-                )}
-
             </div>
 
             <div id="profilePicture">
                 <img
-                    src="/profilePic.JPG"
+                    src="/profilePic.jpg"
                     alt="Profile Pic"
                     style={{ height: "500px", border: "2px solid black", borderRadius: "5px", padding: "10px" }}
                 />
