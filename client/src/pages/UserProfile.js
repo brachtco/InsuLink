@@ -160,6 +160,8 @@ function UserProfile() {
                     >
                         <FormControlLabel value="female" control={<Radio />} label="Female" />
                         <FormControlLabel value="male" control={<Radio />} label="Male" />
+                        <FormControlLabel value="other" control={<Radio />} label="Other" />
+                        <FormControlLabel value="hidden" control={<Radio />} label="Rather Not Say" />                        
                     </RadioGroup>                    
 
                     {/* Smoke? */}
