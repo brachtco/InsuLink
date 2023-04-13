@@ -7,6 +7,8 @@ import HomeTest from './pages/HomeTest';
 import UserProfile from './pages/UserProfile';
 import Footer from "./components/Footer";
 import Container from '@mui/material/Container';
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 //add components as they are finished here:
 
 function App() {
@@ -26,6 +28,14 @@ function App() {
           <Route
             path="/UserProfile"
             element={<UserProfile />}
+          />
+          <Route
+            path="/Login"
+            element={<Login />} 
+          />
+          <Route
+          Path="/Signup"
+          element={<Signup/> }
           />                 
         </Routes>
         <Footer />
