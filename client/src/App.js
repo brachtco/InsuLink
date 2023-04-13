@@ -62,12 +62,12 @@ function App() {
             element={<SelectedStudent />}
           />               
           <Route
-            path="/login"
+            path="/Login"
             element={<Login />} 
           />
           <Route
-          path="/signup"
-          element={<Signup/> }
+          path="/Signup"
+          element={<Signup />}
           />                 
         </Routes>
         <Footer />
