@@ -1,49 +1,51 @@
+
+
 [
     {
         "name": "University of Utah",
-        "image": "",
+        "image": "../assets/images/UofU.png",
         "region": "Western"
     },
   
     {
         "name": "San Diego State University",
-        "image": "",
+        "image": "../assets/images/SDSU.jpeg",
         "region": "Western"
     },
   
     {
         "name": "University of Oregon",
-        "image": "",
+        "image": "../assets/images/Oregon.jpeg",
         "region": "Western"
     },
   
     {
         "name": "Arizona State University",
-        "image": "",
+        "image": "../assets/images/ASU.jpeg",
         "region": "Western"
     },
   
     {
         "name": "Boston College",
-        "image": "",
+        "image": "../assets/images/BC.jpeg",
         "region": "Eastern"
     },
   
     {
         "name": "Florida State University",
-        "image": "",
+        "image": "../assets/images/FSU.jpeg",
         "region": "Eastern"
     },
   
     {
         "name": "Harvard",
-        "image": "",
+        "image": "../assets/images/FSU.png",
         "region": "Eastern"
     },
   
     {
         "name": "Duke",
-        "image": "",
+        "image": "../assets/images/Duke",
         "region": "Eastern"
-    },
+    }
   ]
