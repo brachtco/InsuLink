@@ -7,8 +7,6 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import Button from '@mui/material/Button';
 
-
-
 function UserProfile() {
 
     const [profileName, setName] = useState('');
@@ -18,19 +16,14 @@ function UserProfile() {
     const [profileHobbies, setHobbies] = useState('');
     const [profileSmoke, setSmoke] = useState('');
     const [profileDrink, setDrink] = useState('');
-
+    
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
 
-        // Defaulting these to "no" unless the user changes them to "yes".  Otherwise their default value won't be recognized by handleFormSubmit()
-        setSmoke("no");
-        setDrink("no");
-        setGender("female");
-
-        // Based on the input type, we set the state of either email, username, and password
+        // Based on the input type, we set the state
         if (inputType === 'profileName') {
             setName(inputValue);
         }
@@ -73,13 +66,36 @@ function UserProfile() {
             alert('Hometown is required!');
             return;
         }
+        // Check Gender
+        else if (!profileGender) {
+            alert('Gender is required!');
+            return;
+        }
+        // Check Smoke
+        else if (!profileSmoke) {
+            alert('Smoking preference is required!');
+            return;
+        }
+        // Check Drink
+        else if (!profileDrink) {
+            alert('Drinking preference is required!');
+            return;
+        }                        
         // Check Hobbies
-        else if (!profileHometown) {
+        else if (!profileHobbies) {
             alert('Please enter at least 1 hobby!');
             return;
         } else {
             //TODO: Need to actually store this data in the database.
-            alert(`Hello ${profileName}, gender ${profileGender}, age ${profileAge}, hometown of ${profileHometown}, with hobbies ${profileHobbies}, smoker: ${profileSmoke}, drinker: ${profileDrink}`);
+            alert(`
+            Hello ${profileName}, 
+            gender: ${profileGender}, 
+            age ${profileAge}, 
+            hometown of ${profileHometown}, 
+            with hobbies ${profileHobbies}, 
+            smoker: ${profileSmoke}, 
+            drinker: ${profileDrink}
+            `);      
         };
     };
 
@@ -103,18 +119,6 @@ function UserProfile() {
                         name="profileName"
                         onChange={handleInputChange}
                     />
-
-                    {/* Gender */}
-                    <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-                    <RadioGroup
-                        aria-labelledby="demo-radio-buttons-group-label"
-                        defaultValue="female"
-                        name="profileGender"
-                        onChange={handleInputChange}
-                    >
-                        <FormControlLabel value="female" control={<Radio />} label="Female" />
-                        <FormControlLabel value="male" control={<Radio />} label="Male" />
-                    </RadioGroup>
 
                     {/* Age */}
                     <TextField
@@ -147,11 +151,23 @@ function UserProfile() {
                         onChange={handleInputChange}
                     />
 
+                    {/* Gender */}
+                    <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+                    <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        name="profileGender"
+                        onChange={handleInputChange}
+                    >
+                        <FormControlLabel value="female" control={<Radio />} label="Female" />
+                        <FormControlLabel value="male" control={<Radio />} label="Male" />
+                        <FormControlLabel value="other" control={<Radio />} label="Other" />
+                        <FormControlLabel value="hidden" control={<Radio />} label="Rather Not Say" />                        
+                    </RadioGroup>                    
+
                     {/* Smoke? */}
                     <FormLabel id="demo-radio-buttons-group-label">Smoke?</FormLabel>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
-                        defaultValue="no"
                         name="profileSmoke"
                         onChange={handleInputChange}
                     >
@@ -163,7 +179,6 @@ function UserProfile() {
                     <FormLabel id="demo-radio-buttons-group-label">Drink?</FormLabel>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
-                        defaultValue="no"
                         name="profileDrink"
                         onChange={handleInputChange}
                     >
