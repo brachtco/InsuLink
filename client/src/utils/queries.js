@@ -18,13 +18,13 @@ export const QUERY_USERS = gql`
     }
     `;
 
-export const QUERY_SCHOOLS = gql`
-    query getSchools {
-        schools {
-            _id
-            name
-            image
-            region
+    export const QUERY_SCHOOLS =gql`
+        query getSchools {
+            schools {
+                _id 
+                name
+                image
+                region
+            }
         }
-    }
-    `;
+        `
