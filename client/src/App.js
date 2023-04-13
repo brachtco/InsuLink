@@ -10,13 +10,13 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import Header from "./components/Header";
 import LandingPage from './pages/LandingPage';
-import HomeTest from './pages/HomeTest';
 import UserProfile from './pages/UserProfile';
 import Footer from "./components/Footer";
 import Container from '@mui/material/Container';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import SelectedStudent from "./pages/SelectedStudent";
+import HomePage from "./pages/HomePage";
 //add components as they are finished here:
 
 const httpLink = createHttpLink({
@@ -50,8 +50,8 @@ function App() {
             element={<LandingPage />}
           />
           <Route
-            path="/HomeTest"
-            element={<HomeTest />}
+            path="/HomePage"
+            element={<HomePage />}
           />
           <Route
             path="/UserProfile"
