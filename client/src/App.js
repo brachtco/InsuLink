@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Container from '@mui/material/Container';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import SelectedStudent from "./pages/SelectedStudent";
 //add components as they are finished here:
 
 const httpLink = createHttpLink({
@@ -56,6 +57,10 @@ function App() {
             path="/UserProfile"
             element={<UserProfile />}
           />
+          <Route
+            path="/SelectedStudent"
+            element={<SelectedStudent />}
+          />               
           <Route
             path="/login"
             element={<Login />} 
