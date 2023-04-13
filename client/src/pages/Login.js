@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
-import { myInstance } from '../utils/auth';
+import { AuthUtil } from '../utils/auth';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -28,7 +28,7 @@ const Login = (props) => {
         variables: { ...formState },
       });
 
-      myInstance.login(data.login.token);
+      AuthUtil.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
