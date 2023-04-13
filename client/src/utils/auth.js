@@ -38,10 +38,10 @@ class AuthService {
   }
 }
 
-const myInstance = new AuthService();
+const AuthUtil = new AuthService();
 
 export {
-  myInstance, AuthService
+  AuthUtil, AuthService
 }
 
 //export default new AuthService();
