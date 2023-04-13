@@ -42,8 +42,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <Router>
+      <Header />
       <Container style={{ height: "100vh", position: "relative" }} >
-        <Header />
         <Routes>
           <Route
             path="/"
@@ -70,8 +70,8 @@ function App() {
           element={<Signup />}
           />                 
         </Routes>
-        <Footer />
       </Container>
+      <Footer />
     </Router>
     </ApolloProvider>
   );
