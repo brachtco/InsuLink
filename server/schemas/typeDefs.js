@@ -5,6 +5,8 @@ const typeDefs = gql`
   type School {
     _id: ID
     name: String
+    image: String
+    region: String
   }
 
   type User {
@@ -21,7 +23,7 @@ const typeDefs = gql`
   }
 
   type Auth {
-    token: ID
+    token: ID!
     user: User
   }
 
@@ -34,11 +36,6 @@ const typeDefs = gql`
     addUser(
       firstName: String!
       lastName: String!
-      age: Int
-      gender: String
-      bio: String
-      interests: String
-      hometown: String  
       email: String!
       password: String!
     ): Auth
