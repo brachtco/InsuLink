@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
@@ -23,7 +23,7 @@ const theme = createTheme();
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const login = useMutation(LOGIN_USER);
+  const [login, { error }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -36,6 +36,7 @@ const Login = (props) => {
   };
 
   // submit form
+  const navigate = useNavigate();
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -45,6 +46,7 @@ const Login = (props) => {
       });
 
       AuthUtil.login(data.login.token);
+      if (data) navigate('/HomePage')
     } catch (e) {
       console.error(e);
     }
@@ -82,7 +84,7 @@ const Login = (props) => {
               name="email"
               autoComplete="email"
               autoFocus
-              onchange={handleChange}
+              onChange={handleChange}
             />
             <TextField
               margin="normal"
@@ -93,7 +95,7 @@ const Login = (props) => {
               type="password"
               id="password"
               autoComplete="current-password"
-              onchange={handleChange}
+              onChange={handleChange}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -107,6 +109,11 @@ const Login = (props) => {
             >
               Sign In
             </Button>
+            { error ? 
+            <Typography align='center' color='red'>
+            {error.message} 
+            </Typography>
+            : null }
             <Typography align='center'>
               <Link to="/Signup" variant="body2">
                 {"Don't have an account? Sign Up"}
