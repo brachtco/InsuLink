@@ -16,9 +16,11 @@ const styles = {
     footer: {
         backgroundColor: '#EFF8E2',
         // margin: '10%',
-        minHeight: '80px',
+        height: '80px',
         display: 'block',
         boxShadow: '4px 6px 12px 4px rgba(0, 0, 0, 0.3), 2px 6px 20px 2px rgba(0, 0, 0, 0.29)',
+        marginTop: '10px',
+        position: 'relative'
     },
     h4: {
         paddingTop: '10px',
@@ -33,8 +35,8 @@ const Footer = () => {
 //     const navigate = useNavigate();
     return (
         <ThemeProvider theme={theme}>
-            <footer style={styles.footer} className='MuiPaper-elevation4'>
-                <Container maxWidth='lg' position='static' color='primary'>
+            <footer style={styles.footer}>
+                <Container maxWidth='lg' color='primary'>
                     <div>
                         <h4 color='#E8871E' style={styles.h4}>Code Riders™</h4>
                     </div>
