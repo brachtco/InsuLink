@@ -23,7 +23,7 @@ const theme = createTheme();
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  const login = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
