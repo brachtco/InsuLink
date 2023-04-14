@@ -28,3 +28,7 @@ export const QUERY_USERS = gql`
             }
         }
         `
+
+        //Insomnia test routes
+        //Appollo server
+        //
