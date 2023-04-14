@@ -1,6 +1,6 @@
 import React from 'react';
 
-function EasternSchool() {
+function EasternSchools() {
 
     return(
     <div>
@@ -21,4 +21,4 @@ function EasternSchool() {
 
 }; 
 
-export default EasternSchool;
+export default EasternSchools;

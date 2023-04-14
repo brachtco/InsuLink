@@ -17,8 +17,9 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import SelectedStudent from "./pages/SelectedStudent";
 import HomePage from "./pages/HomePage";
-import WesternSchool from './pages/westernSchools';
-import EasternSchool from './pages/easternSchools';
+import WesternSchools from './pages/WesternSchools';
+import EasternSchools from './pages/EasternSchools';
+import SelectedSchool from './pages/SelectedSchool';
 
 //add components as they are finished here:
 
@@ -66,16 +67,16 @@ function App() {
           />
           <Route
             path="/WesternSchools"
-            element={<WesternSchool />}
+            element={<WesternSchools />}
           />
           <Route
             path="/EasternSchools"
-            element={<EasternSchool />}
+            element={<EasternSchools />}
           />
-          {/* <Route
+          <Route
             path="/SelectedSchool"
-            element={<SelectedSchool />} */}
-          {/* />                */}
+            element={<SelectedSchool />}
+          />
           <Route
             path="/Login"
             element={<Login />} 

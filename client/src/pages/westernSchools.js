@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WesternSchool() {
+function WesternSchools() {
 
     return(
     <div>
@@ -21,4 +21,4 @@ function WesternSchool() {
 
 }; 
 
-export default WesternSchool;
+export default WesternSchools;
