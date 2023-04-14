@@ -17,6 +17,9 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import SelectedStudent from "./pages/SelectedStudent";
 import HomePage from "./pages/HomePage";
+import WesternSchool from './pages/westernSchools';
+import EasternSchool from './pages/easternSchools';
+
 //add components as they are finished here:
 
 const httpLink = createHttpLink({
@@ -60,7 +63,19 @@ function App() {
           <Route
             path="/SelectedStudent"
             element={<SelectedStudent />}
-          />               
+          />
+          <Route
+            path="/WesternSchools"
+            element={<WesternSchool />}
+          />
+          <Route
+            path="/EasternSchools"
+            element={<EasternSchool />}
+          />
+          {/* <Route
+            path="/SelectedSchool"
+            element={<SelectedSchool />} */}
+          {/* />                */}
           <Route
             path="/Login"
             element={<Login />} 

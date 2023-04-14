@@ -1,56 +1,56 @@
 import React from 'react';
 
-function selectedStudent() {
+function SelectedStudent() {
 
     return(
     <div>
         {/* TODO: Link navbar buttons to associated pages */}
         
         
-        <div id="westernSchool">
+        <div id="WesternSchool">
             <p>Current University</p>
-            <Card style={{ display: "flex", justifyContent: "center"}}>
+            <div style={{ display: "flex", justifyContent: "center"}}>
              <button id="btn-1">
-                <Card>
+                <div>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </Card>
+                </div>
              </button>
              <button id="btn-2">
-                <Card>
+                <div>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </Card>
+                </div>
              </button>
              <button id="btn-3">
-                <Card>
+                <div>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </Card>
+                </div>
              </button>
              <button id="btn-4">
-                <Card>
+                <div>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </Card>
+                </div>
              </button>
              <button id="btn-5">
-                <Card>
+                <div>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </Card>
+                </div>
              </button>
-             </Card>
+             </div>
         
         </div>
     </div>
@@ -58,4 +58,4 @@ function selectedStudent() {
 
 }; 
 
-export default selectedStudent();
+export default SelectedStudent;
