@@ -17,11 +17,12 @@ const styles = {
 function LandingPage() {
 
     return (
-        <div id="landingPage" style={{ height: "100vh", position: "relative" }}>
+        <div id="landingPage" 
+        style={{ height: "100vh", position: "relative"}}>
 
             <div style={{ display: "flex", justifyContent: "center"}}>
                 <img src="/insulinkLogoWithName.png" alt="Insulink Branded Logo" 
-                style={{ height: "500px", padding: '40px', margin: '10%' }} />
+                style={{ height: "500px", padding: '20px', margin: '10%' }} />
             </div>
 
             <br></br>
