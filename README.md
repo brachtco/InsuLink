@@ -26,13 +26,13 @@ https://opensource.org/license/mit/
 ## Contributors
 
 Danny Bracht  
-Joey Hayes
-Peter Krysinski
-Spencer Lore
-Patrick Ruf
+Joey Hayes  
+Peter Krysinski  
+Spencer Lore  
+Patrick Ruf  
 
 ## Links
 
 Deployed Railway Link: https://insulink-production.up.railway.app/
 
-GitHub Repo: 
+GitHub Repo: https://github.com/brachtco/InsuLink
