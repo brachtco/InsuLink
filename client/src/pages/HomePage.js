@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 
 function HomePage() {
 
@@ -13,12 +14,12 @@ function HomePage() {
 
             <div id="westernEastern" style={{ display: "flex", justifyContent: "space-around" }}>
                 <Box sx={{ '& button': { m: 1 } }}>
-                    <Button variant="contained" size="large" style={{ marginLeft: "30px", marginRight: "30px" }}>
+                    <Link to="/westernSchools" variant="contained" size="large" style={{ marginLeft: "30px", marginRight: "30px" }}>
                         Western
-                    </Button>
-                    <Button variant="contained" size="large" style={{ marginLeft: "30px", marginRight: "30px" }}>
+                    </Link>
+                    <Link to="/easternSchools" variant="contained" size="large" style={{ marginLeft: "30px", marginRight: "30px" }}>
                         Eastern
-                    </Button>
+                    </Link>
                 </Box>
             </div>
         </div>
