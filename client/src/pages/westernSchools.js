@@ -27,15 +27,15 @@ function westernSchool() {
          </ul>
             </div>
         </nav>
-        <header id="westernHeader">InsuLink add logo here</header>
+      
         <div id="westernSchool">
-            <card style={{ display: "flex", justifyContent: "center"}}>
+            <Card style={{ display: "flex", justifyContent: "center"}}>
              <button id="btn-1">Boston College</button>
                 <button id="btn-2">Florida State University</button>
                 <button id="btn-3">Harvard</button>
                <button id="btn4">Duke</button>
-             </card>
-        <footer id="westernFooter">Western Schools Code Riders™</footer>
+             </Card>
+     
         </div>
     </div>
     )

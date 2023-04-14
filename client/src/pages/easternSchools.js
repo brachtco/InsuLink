@@ -27,7 +27,7 @@ function easternSchool() {
          </ul>
             </div>
         </nav>
-        <header id="easternHeader">InsuLink add logo here</header>
+       
         <div id="easternSchool">
             <Card style={{ display: "flex", justifyContent: "center"}}>
                 <button id="btn-1">Boston College</button>
@@ -35,7 +35,7 @@ function easternSchool() {
                 <button id="btn-3">Harvard</button>
                <button id="btn-4">Duke</button>
              </Card>
-        <footer id="easternFooter">Eastern Schools Code Riders™</footer>
+       
         </div>
     </div>
     )

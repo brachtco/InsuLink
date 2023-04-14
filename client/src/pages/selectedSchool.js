@@ -27,7 +27,7 @@ function selectedStudent() {
          </ul>
             </div>
         </nav>
-        <header id="selectedHeader">InsuLink add logo here</header>
+        
         <div id="westernSchool">
             <p>Current University</p>
             <Card style={{ display: "flex", justifyContent: "center"}}>
@@ -72,7 +72,7 @@ function selectedStudent() {
                 </Card>
              </button>
              </Card>
-        <footer id="selectedFooter">selected school | Code Riders™</footer>
+        
         </div>
     </div>
     )
