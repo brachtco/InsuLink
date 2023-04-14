@@ -30,9 +30,9 @@ function LandingPage() {
             <div style={{ display: "flex", justifyContent: "center"}}>
                 {/* TODO: Make this button take you to homepage  */}
                 <Link to="/HomePage" className="btn btn-primary">
-                <Button variant='contained' style={styles.buttonStyle}>
-                    Get Started...
-                </Button> 
+                    <Button variant='contained' style={styles.buttonStyle}>
+                        Get Started...
+                    </Button> 
                 </Link>
             </div>
 
