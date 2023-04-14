@@ -30,48 +30,48 @@ function selectedStudent() {
         <header id="selectedHeader">InsuLink add logo here</header>
         <div id="westernSchool">
             <p>Current University</p>
-            <card style={{ display: "flex", justifyContent: "center"}}>
+            <Card style={{ display: "flex", justifyContent: "center"}}>
              <button id="btn-1">
-                <card>
+                <Card>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </card>
+                </Card>
              </button>
              <button id="btn-2">
-                <card>
+                <Card>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </card>
+                </Card>
              </button>
              <button id="btn-3">
-                <card>
+                <Card>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </card>
+                </Card>
              </button>
              <button id="btn-4">
-                <card>
+                <Card>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </card>
+                </Card>
              </button>
              <button id="btn-5">
-                <card>
+                <Card>
                     <p id="cardTag">Name</p>
                     <p id="cardTag">Age</p>
                     <p id="cardTag">Hometown</p>
                     <p id="cardTag">3 things about me</p>
-                </card>
+                </Card>
              </button>
-             </card>
+             </Card>
         <footer id="selectedFooter">selected school | Code Riders™</footer>
         </div>
     </div>

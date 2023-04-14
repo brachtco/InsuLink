@@ -14,7 +14,7 @@ function LandingPage() {
 
             <div style={{ display: "flex", justifyContent: "center"}}>
                 {/* TODO: Make this button take you to homepage  */}
-                <Link to="/HomeTest" className="btn btn-primary">Get Started...</Link>
+                <Link to="/HomePage" className="btn btn-primary">Get Started...</Link>
             </div>
 
             <div style={{ display: "flex", justifyContent: "center"}}>
