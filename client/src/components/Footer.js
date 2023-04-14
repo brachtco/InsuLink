@@ -14,15 +14,18 @@ const theme = createTheme({
 
 const styles = {
     footer: {
-        backgroundColor: '#E8871E',
+        backgroundColor: '#EFF8E2',
         // margin: '10%',
-        minHeight: '100px',
+        minHeight: '80px',
         display: 'block',
+        boxShadow: '4px 6px 12px 4px rgba(0, 0, 0, 0.3), 2px 6px 20px 2px rgba(0, 0, 0, 0.29)',
     },
     h4: {
         paddingTop: '10px',
         display: 'flex',
-        float: 'right'
+        float: 'right',
+        // textShadow: '1px 0 #E8871E, -1px 0 #E8871E, 0 1px #E8871E, 0 -1px #E8871E, 1px 1px #E8871E, -1px -1px #E8871E, 1px -1px #E8871E, -1px 1px #E8871E',
+        color: '#151E3F',
     }
 }
 const Footer = () => {
@@ -33,7 +36,7 @@ const Footer = () => {
             <footer style={styles.footer} className='MuiPaper-elevation4'>
                 <Container maxWidth='lg' position='static' color='primary'>
                     <div>
-                        <h4 color='#000000' style={styles.h4}>Code Riders™</h4>
+                        <h4 color='#E8871E' style={styles.h4}>Code Riders™</h4>
                     </div>
                 </Container>
             </footer>
