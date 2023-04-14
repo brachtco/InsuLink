@@ -13,30 +13,30 @@ function WesternSchools() {
 
             <div id="westernSchools" style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                 <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-                    <Link to="/SelectedSchool" style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" component="span" size="large" style={{ marginLeft: "30px", marginRight: "30px" }}>
-                            University of Utah
+                    <Link to="/SelectedSchool" state={{collegeName:'Arizona State University'}} style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" component="span" size="large" >
+                            Arizona State University
                         </Button>
                     </Link>
-                </div>
+                </div>  
                 <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-                    <Link to="/SelectedSchool" style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" component="span" size="large" style={{ marginLeft: "30px", marginRight: "30px" }}>
+                    <Link to="/SelectedSchool" state={{collegeName:'San Diego State University'}} style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" component="span" size="large">
                             San Diego State University
                         </Button>
                     </Link>
-                </div>
+                </div>        
                 <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-                    <Link to="/SelectedSchool" style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" component="span" size="large" style={{ marginLeft: "30px", marginRight: "30px" }}>
+                    <Link to="/SelectedSchool" state={{collegeName:'University of Oregon'}} style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" component="span" size="large">
                             University of Oregon
                         </Button>
                     </Link>
-                </div>
+                </div>      
                 <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-                    <Link to="/SelectedSchool" style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" component="span" size="large" style={{ marginLeft: "30px", marginRight: "30px" }}>
-                            Arizona State University
+                    <Link to="/SelectedSchool" state={{collegeName:'University of Utah'}} style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" component="span" size="large">
+                            University of Utah
                         </Button>
                     </Link>
                 </div>
