@@ -1,13 +1,13 @@
 import React from 'react';
 
-function selectedStudent() {
+function SelectedStudent() {
 
     return(
     <div>
         {/* TODO: Link navbar buttons to associated pages */}
         
         
-        <div id="westernSchool">
+        <div id="WesternSchool">
             <p>Current University</p>
             <Card style={{ display: "flex", justifyContent: "center"}}>
              <button id="btn-1">
@@ -58,4 +58,4 @@ function selectedStudent() {
 
 }; 
 
-export default selectedStudent();
+export default SelectedStudent;

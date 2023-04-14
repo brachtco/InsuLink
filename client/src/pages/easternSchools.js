@@ -1,13 +1,13 @@
 import React from 'react';
 
-function easternSchool() {
+function EasternSchool() {
 
     return(
     <div>
          {/* TODO: Link navbar buttons to associated pages */}
     
        
-        <div id="easternSchool">
+        <div id="EasternSchool">
             <Card style={{ display: "flex", justifyContent: "center"}}>
                 <button id="btn-1">Boston College</button>
                 <button id="btn-2">Florida State University</button>
@@ -21,4 +21,4 @@ function easternSchool() {
 
 }; 
 
-export default easternSchool();
+export default EasternSchool;
