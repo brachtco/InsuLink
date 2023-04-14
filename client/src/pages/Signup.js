@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import { AuthUtil } from '../utils/auth';
@@ -25,7 +25,7 @@ const Signup = () => {
     email: '',
     password: '',
   });
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser, { error }] = useMutation(ADD_USER);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -36,6 +36,7 @@ const Signup = () => {
     });
   };
 
+  const navigate = useNavigate();
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -46,6 +47,7 @@ const Signup = () => {
       });
 
       AuthUtil.login(data.addUser.token);
+      if (data) navigate('/HomePage');
     } catch (e) {
       console.error(e);
     }
@@ -126,9 +128,12 @@ const Signup = () => {
             >
               Sign Up
             </Button>
+            { error ? 
+            <Typography align='center' color='red'>
+            {error.message} 
+            </Typography>
+            : null }
             <Typography align='center'>
-              {error ? error.message : null}
-              {/*data ? console.log(data) : null} */}
               <Link to="/Login" variant="body2">
                 {"Already have an account? Sign in"}
               </Link>
