@@ -23,7 +23,7 @@ const theme = createTheme();
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
-  const login = useMutation(LOGIN_USER);
+  const [login] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -33,6 +33,7 @@ const Login = (props) => {
       ...formState,
       [name]: value,
     });
+    console.log(formState);
   };
 
   // submit form
@@ -82,7 +83,7 @@ const Login = (props) => {
               name="email"
               autoComplete="email"
               autoFocus
-              onchange={handleChange}
+              onChange={handleChange}
             />
             <TextField
               margin="normal"
@@ -93,7 +94,7 @@ const Login = (props) => {
               type="password"
               id="password"
               autoComplete="current-password"
-              onchange={handleChange}
+              onChange={handleChange}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}

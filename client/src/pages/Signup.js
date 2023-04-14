@@ -13,18 +13,19 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import { AuthUtil } from '../utils/auth';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
-    username: '',
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
   });
-  const addUser = useMutation(ADD_USER);
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -79,7 +80,7 @@ const Signup = () => {
                   id="firstName"
                   label="First Name"
                   autoFocus
-                  onchange={handleChange}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -90,7 +91,7 @@ const Signup = () => {
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
-                  onchange={handleChange}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -101,7 +102,7 @@ const Signup = () => {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
-                  onchange={handleChange}
+                  onChange={handleChange}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -113,7 +114,7 @@ const Signup = () => {
                   type="password"
                   id="password"
                   autoComplete="new-password"
-                  onchange={handleChange}
+                  onChange={handleChange}
                 />
               </Grid>
             </Grid>
@@ -126,6 +127,8 @@ const Signup = () => {
               Sign Up
             </Button>
             <Typography align='center'>
+              {error ? error.message : null}
+              {/*data ? console.log(data) : null} */}
               <Link to="/Login" variant="body2">
                 {"Already have an account? Sign in"}
               </Link>
