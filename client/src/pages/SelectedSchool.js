@@ -1,6 +1,10 @@
 import React from 'react';
+import {useLocation} from 'react-router-dom';
 
-function SelectedStudent() {
+function SelectedSchool(props) {
+
+    const location = useLocation();
+    const CollegeName = location.state.collegeName;
 
     return(
     <div>
@@ -8,7 +12,7 @@ function SelectedStudent() {
         
         
         <div id="WesternSchool">
-            <p>Current University</p>
+            <p>Current University: {CollegeName}</p>
             <div style={{ display: "flex", justifyContent: "center"}}>
              <button id="btn-1">
                 <div>
@@ -58,4 +62,4 @@ function SelectedStudent() {
 
 }; 
 
-export default SelectedStudent;
+export default SelectedSchool;
