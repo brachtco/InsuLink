@@ -29,12 +29,12 @@ function easternSchool() {
         </nav>
         <header id="easternHeader">InsuLink add logo here</header>
         <div id="easternSchool">
-            <card style={{ display: "flex", justifyContent: "center"}}>
+            <Card style={{ display: "flex", justifyContent: "center"}}>
                 <button id="btn-1">Boston College</button>
                 <button id="btn-2">Florida State University</button>
                 <button id="btn-3">Harvard</button>
                <button id="btn-4">Duke</button>
-             </card>
+             </Card>
         <footer id="easternFooter">Eastern Schools Code Riders™</footer>
         </div>
     </div>
