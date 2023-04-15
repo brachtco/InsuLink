@@ -13,7 +13,6 @@ function SelectedSchool() {
 
     const location = useLocation();
     const CollegeName = location.state.collegeName;
-    const CollegePic = location.state.collegePic;
 
     const students = [
         {
@@ -23,7 +22,8 @@ function SelectedSchool() {
             age: "22",
             gender: "Male",
             interests: "Paddle tennis, art, and bikes",
-            hometown: "Logan, UT"
+            hometown: "Logan, UT",
+            img: "/assets/images/InsulinkMale.jpg"
         },
         {
             id: 2,
@@ -32,16 +32,18 @@ function SelectedSchool() {
             age: "33",
             gender: "Female",
             interests: "Fly fishing, guitars, and music",
-            hometown: "Provo, UT"
+            hometown: "Provo, UT",
+            img: "/assets/images/InsulinkFemale.jpeg"
         },
         {
             id: 3,
             firstName: "Mike",
             lastName: "Mikeson",
             age: "44",
-            gender: "Other",
+            gender: "Male",
             interests: "Beer, food, and sports",
-            hometown: "SLC, UT"
+            hometown: "SLC, UT",
+            img: "/assets/images/InsulinkMale.jpg"
         }
     ];
 
@@ -60,33 +62,33 @@ function SelectedSchool() {
                             return (
                                 <Card sx={{ maxWidth: 345 }} key={student.id}>
                                     <CardActionArea>
-                                    <Link to="/SelectedStudent" style={{ textDecoration: 'none' }}>
-                                        <CardMedia
-                                            component="img"
-                                            height="250"
-                                            image={CollegePic}
-                                            alt="profile pic"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                {student.firstName} {student.lastName}
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Age: {student.age}
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Gender: {student.gender}
-                                            </Typography>               
-                                            <Typography variant="body2" color="text.secondary">
-                                                Interests: {student.interests}
-                                            </Typography>                    
-                                            <Typography variant="body2" color="text.secondary">
-                                                Hometown: {student.hometown}
-                                            </Typography>                                                                                                 
-                                        </CardContent>
+                                        <Link to="/SelectedStudent" style={{ textDecoration: 'none' }}>
+                                            <CardMedia
+                                                component="img"
+                                                height="250"
+                                                image={student.img}
+                                                alt="profile pic"
+                                            />
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="div">
+                                                    {student.firstName} {student.lastName}
+                                                </Typography>
+                                                <Typography variant="body2" color="text.secondary">
+                                                    Age: {student.age}
+                                                </Typography>
+                                                <Typography variant="body2" color="text.secondary">
+                                                    Gender: {student.gender}
+                                                </Typography>
+                                                <Typography variant="body2" color="text.secondary">
+                                                    Interests: {student.interests}
+                                                </Typography>
+                                                <Typography variant="body2" color="text.secondary">
+                                                    Hometown: {student.hometown}
+                                                </Typography>
+                                            </CardContent>
                                         </Link>
                                     </CardActionArea>
-                                    
+
                                 </Card>
                             )
                         })}
