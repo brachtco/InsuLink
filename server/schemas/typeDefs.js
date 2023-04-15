@@ -4,6 +4,8 @@ const typeDefs = gql`
   type School {
     _id: ID
     name: String
+    image: String
+    region: String
   }
 
   type User {

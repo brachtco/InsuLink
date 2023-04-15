@@ -2,7 +2,7 @@ import { gql } from '@apollo/client'
 
 export const QUERY_USERS = gql`
     query getUsers {
-        users {
+        user {
             _id
             firstName
             lastName
@@ -18,13 +18,14 @@ export const QUERY_USERS = gql`
 
     export const QUERY_SCHOOLS =gql`
         query getSchools {
-            schools {
+            school {
                 _id 
                 name
                 image
                 region
             }
         }
+        
         `;
 
     export const QUERY_ME = gql`
@@ -37,3 +38,4 @@ export const QUERY_USERS = gql`
             }
         }
     `;
+

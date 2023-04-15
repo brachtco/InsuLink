@@ -1,8 +1,41 @@
 import React from 'react';
-import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 
 function EasternSchools() {
+
+    const schools = [
+        {
+            id: 1,
+            collegeName: "Boston College",
+            img: "/assets/images/BC.jpeg",
+            imgAlt: "Boston College"
+        },
+        {
+            id: 2,
+            collegeName: "Duke",
+            img: "/assets/images/Duke.png",
+            imgAlt: "Duke"
+        },
+        {
+            id: 3,
+            collegeName: "Florida State University",
+            img: "/assets/images/FSU.png",
+            imgAlt: "Florida State University"
+        },
+        {
+            id: 4,
+            collegeName: "Harvard",
+            img: "/assets/images/Harvard.jpeg",
+            imgAlt: "Harvard"
+        }
+    ];
 
     return (
         <div id="EasternSchools" style={{ height: "100vh", position: "relative" }}>
@@ -12,35 +45,33 @@ function EasternSchools() {
             </div>
 
             <div id="easternSchools" style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-                <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-                    <Link to="/SelectedSchool" state={{collegeName:'Boston College'}} style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" component="span" size="large">
-                            Boston College
-                        </Button>
-                    </Link>
-                </div>
-                <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-                    <Link to="/SelectedSchool" state={{collegeName:'Duke'}} style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" component="span" size="large">
-                            Duke
-                        </Button>
-                    </Link>
-                </div>                
-                <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-                    <Link to="/SelectedSchool" state={{collegeName:'Florida State University'}} style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" component="span" size="large">
-                            Florida State University
-                        </Button>
-                    </Link>
-                </div>
-                <div style={{ marginBottom: "20px", marginTop: "20px" }}>
-                    <Link to="/SelectedSchool" state={{collegeName:'Harvard'}} style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" component="span" size="large">
-                            Harvard
-                        </Button>
-                    </Link>
-                </div>
+                <Box sx={{ width: '100%' }}>
+                    <Stack spacing={6} alignItems="center">
+                        {schools.map(school => {
+                            return (
+                                <Card sx={{ maxWidth: 345 }} key={school.id} style={{ width: "500px" }}>
+                                    <CardActionArea>
+                                        <Link to="/SelectedSchool" state={{ collegeName: school.collegeName }} style={{ textDecoration: 'none' }}>
+                                            <CardMedia
+                                                component="img"
+                                                height="250"
+                                                image={school.img}
+                                                alt={school.imgAlt}
+                                            />
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="div">
+                                                    {school.collegeName}
+                                                </Typography>
+                                            </CardContent>
+                                        </Link>
+                                    </CardActionArea>
+                                </Card>
+                            )
+                        })}
+                    </Stack>
+                </Box>
             </div>
+
         </div>
     )
 };
