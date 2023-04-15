@@ -4,16 +4,14 @@ export const QUERY_USERS = gql`
     query getUsers {
         users {
             _id
-            userFirstName
-            userLastName
+            firstName
+            lastName
             age
             gender
             bio
             interests
             hometown
             email
-            password
-            school
         }
     }
     `;
@@ -27,4 +25,15 @@ export const QUERY_USERS = gql`
                 region
             }
         }
-        `
+        `;
+
+    export const QUERY_ME = gql`
+        query me {
+            me { 
+                _id
+                email
+                firstName
+                lastName
+            }
+        }
+    `;
