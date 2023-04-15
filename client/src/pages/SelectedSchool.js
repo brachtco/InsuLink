@@ -63,7 +63,7 @@ function SelectedSchool() {
                                     <Link to="/SelectedStudent" style={{ textDecoration: 'none' }}>
                                         <CardMedia
                                             component="img"
-                                            height="300"
+                                            height="250"
                                             image={CollegePic}
                                             alt="profile pic"
                                         />
@@ -86,6 +86,7 @@ function SelectedSchool() {
                                         </CardContent>
                                         </Link>
                                     </CardActionArea>
+                                    
                                 </Card>
                             )
                         })}

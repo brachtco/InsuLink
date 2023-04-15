@@ -33,7 +33,7 @@ const styles = {
         // textShadow: '1px 0 #E8871E, -1px 0 #E8871E, 0 1px #E8871E, 0 -1px #E8871E, 1px 1px #E8871E, -1px -1px #E8871E, 1px -1px #E8871E, -1px 1px #E8871E',
         color: '#151E3F',
         position: 'absolute',
-        bottom: 20,
+        bottom: 30,
         left: 640
     }
 }
