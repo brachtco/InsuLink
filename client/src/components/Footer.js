@@ -20,7 +20,11 @@ const styles = {
         display: 'block',
         boxShadow: '4px 6px 12px 4px rgba(0, 0, 0, 0.3), 2px 6px 20px 2px rgba(0, 0, 0, 0.29)',
         marginTop: '10px',
-        position: 'relative'
+        position: 'relative',
+        position: 'absolute',
+        bottom: -950,
+        width: '100%',
+        height: '5rem',
     },
     h4: {
         paddingTop: '10px',
@@ -28,6 +32,9 @@ const styles = {
         float: 'right',
         // textShadow: '1px 0 #E8871E, -1px 0 #E8871E, 0 1px #E8871E, 0 -1px #E8871E, 1px 1px #E8871E, -1px -1px #E8871E, 1px -1px #E8871E, -1px 1px #E8871E',
         color: '#151E3F',
+        position: 'absolute',
+        bottom: 20,
+        left: 640
     }
 }
 const Footer = () => {
