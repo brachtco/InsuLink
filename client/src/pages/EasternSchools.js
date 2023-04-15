@@ -10,6 +10,33 @@ import Stack from '@mui/material/Stack';
 
 function EasternSchools() {
 
+    const schools = [
+        {
+            id: 1,
+            collegeName: "Boston College",
+            img: "/assets/images/BC.jpeg",
+            imgAlt: "Boston College"
+        },
+        {
+            id: 2,
+            collegeName: "Duke",
+            img: "/assets/images/Duke.png",
+            imgAlt: "Duke"
+        },
+        {
+            id: 3,
+            collegeName: "Florida State University",
+            img: "/assets/images/FSU.png",
+            imgAlt: "Florida State University"
+        },
+        {
+            id: 4,
+            collegeName: "Harvard",
+            img: "/assets/images/Harvard.jpeg",
+            imgAlt: "Harvard"
+        }
+    ];
+
     return (
         <div id="EasternSchools" style={{ height: "100vh", position: "relative" }}>
 
@@ -18,89 +45,33 @@ function EasternSchools() {
             </div>
 
             <div id="easternSchools" style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-
                 <Box sx={{ width: '100%' }}>
                     <Stack spacing={6} alignItems="center">
-
-                        {/* Boston College */}
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardActionArea>
-                                <Link to="/SelectedSchool" state={{ collegeName: 'Boston College' }} style={{ textDecoration: 'none' }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="250"
-                                        image="/assets/images/BC.jpeg"
-                                        alt="BC"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            Boston College
-                                        </Typography>
-                                    </CardContent>
-                                </Link>
-                            </CardActionArea>
-                        </Card>
-
-                        {/* Duke */}
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardActionArea>
-                                <Link to="/SelectedSchool" state={{ collegeName: 'Duke' }} style={{ textDecoration: 'none' }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="250"
-                                        image="/assets/images/Duke.png"
-                                        alt="Duke"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            Duke
-                                        </Typography>
-                                    </CardContent>
-                                </Link>
-                            </CardActionArea>
-                        </Card>
-
-                        {/* Florida State University */}
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardActionArea>
-                                <Link to="/SelectedSchool" state={{ collegeName: 'Florida State University' }} style={{ textDecoration: 'none' }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="250"
-                                        image="/assets/images/FSU.png"
-                                        alt="FSU"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            Florida State University
-                                        </Typography>
-                                    </CardContent>
-                                </Link>
-                            </CardActionArea>
-                        </Card>
-
-                        {/* Harvard */}
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardActionArea>
-                                <Link to="/SelectedSchool" state={{ collegeName: 'Harvard' }} style={{ textDecoration: 'none' }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="250"
-                                        image="/assets/images/Harvard.jpeg"
-                                        alt="Harvard"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            Harvard
-                                        </Typography>
-                                    </CardContent>
-                                </Link>
-                            </CardActionArea>
-                        </Card>
+                        {schools.map(school => {
+                            return (
+                                <Card sx={{ maxWidth: 345 }} key={school.id} style={{ width: "500px" }}>
+                                    <CardActionArea>
+                                        <Link to="/SelectedSchool" state={{ collegeName: school.collegeName }} style={{ textDecoration: 'none' }}>
+                                            <CardMedia
+                                                component="img"
+                                                height="250"
+                                                image={school.img}
+                                                alt={school.imgAlt}
+                                            />
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="div">
+                                                    {school.collegeName}
+                                                </Typography>
+                                            </CardContent>
+                                        </Link>
+                                    </CardActionArea>
+                                </Card>
+                            )
+                        })}
                     </Stack>
                 </Box>
-
             </div>
+
         </div>
     )
 };
