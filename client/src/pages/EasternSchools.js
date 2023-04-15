@@ -38,7 +38,7 @@ function EasternSchools() {
     ];
 
     return (
-        <div id="EasternSchools" style={{ height: "100vh", position: "relative" }}>
+        <div id="EasternSchools" style={{ minHeight: "100vh", position: "relative" }}>
 
             <div id="selectEasternSchool" style={{ display: "flex", justifyContent: "center", marginBottom: "50px", marginTop: "50px" }}>
                 <h1>Select Eastern School...</h1>
