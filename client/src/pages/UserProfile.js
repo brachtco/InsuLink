@@ -16,7 +16,7 @@ function UserProfile() {
     const [profileHobbies, setHobbies] = useState('');
     const [profileSmoke, setSmoke] = useState('');
     const [profileDrink, setDrink] = useState('');
-    
+
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
         const { target } = e;
@@ -80,7 +80,7 @@ function UserProfile() {
         else if (!profileDrink) {
             alert('Drinking preference is required!');
             return;
-        }                        
+        }
         // Check Hobbies
         else if (!profileHobbies) {
             alert('Please enter at least 1 hobby!');
@@ -95,7 +95,7 @@ function UserProfile() {
             with hobbies ${profileHobbies}, 
             smoker: ${profileSmoke}, 
             drinker: ${profileDrink}
-            `);      
+            `);
         };
     };
 
@@ -111,10 +111,19 @@ function UserProfile() {
                     autoComplete="off"
                     style={{ height: "100vh", position: "relative" }}
                 >
-                    {/* Name */}
+                    {/* First Name */}
                     <TextField
                         id="outlined-basic"
-                        label="Name"
+                        label="First Name"
+                        variant="outlined"
+                        name="profileName"
+                        onChange={handleInputChange}
+                    />
+
+                    {/* Last Name  */}
+                    <TextField
+                        id="outlined-basic"
+                        label="Last Name"
                         variant="outlined"
                         name="profileName"
                         onChange={handleInputChange}
@@ -161,8 +170,8 @@ function UserProfile() {
                         <FormControlLabel value="female" control={<Radio />} label="Female" />
                         <FormControlLabel value="male" control={<Radio />} label="Male" />
                         <FormControlLabel value="other" control={<Radio />} label="Other" />
-                        <FormControlLabel value="hidden" control={<Radio />} label="Rather Not Say" />                        
-                    </RadioGroup>                    
+                        <FormControlLabel value="hidden" control={<Radio />} label="Rather Not Say" />
+                    </RadioGroup>
 
                     {/* Smoke? */}
                     <FormLabel id="demo-radio-buttons-group-label">Smoke?</FormLabel>
