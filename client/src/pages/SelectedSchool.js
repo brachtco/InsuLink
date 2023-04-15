@@ -60,7 +60,7 @@ function SelectedSchool() {
                     <Stack spacing={6} alignItems="center">
                         {students.map(student => {
                             return (
-                                <Card sx={{ maxWidth: 345 }} key={student.id}>
+                                <Card sx={{ maxWidth: 345 }} key={student.id} style={{width: "500px"}}>
                                     <CardActionArea>
                                         <Link to="/SelectedStudent" style={{ textDecoration: 'none' }}>
                                             <CardMedia
