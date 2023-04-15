@@ -48,7 +48,7 @@ function SelectedSchool() {
     ];
 
     return (
-        <div id="selectStudent" style={{ height: "100vh", position: "relative" }}>
+        <div id="selectStudent" style={{ minHeight: "100vh", position: "relative" }}>
 
             <div id="selectWesternSchool" style={{ display: "flex", justifyContent: "center", marginBottom: "50px", marginTop: "50px" }}>
                 <h1>{CollegeName}</h1>

@@ -20,7 +20,7 @@ const styles = {
         boxShadow: '4px 6px 12px 4px rgba(0, 0, 0, 0.3), 2px 6px 20px 2px rgba(0, 0, 0, 0.29)',
         marginTop: '10px',
         position: 'absolute',
-        bottom: -950,
+        bottom: 'auto',
         width: '100%',
         height: '5rem',
     },
@@ -30,9 +30,9 @@ const styles = {
         float: 'right',
         // textShadow: '1px 0 #E8871E, -1px 0 #E8871E, 0 1px #E8871E, 0 -1px #E8871E, 1px 1px #E8871E, -1px -1px #E8871E, 1px -1px #E8871E, -1px 1px #E8871E',
         color: '#151E3F',
-        position: 'absolute',
-        bottom: 30,
-        left: 640
+        // position: 'absolute',
+        // bottom: 30,
+        // left: 640
     }
 }
 const Footer = () => {

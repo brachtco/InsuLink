@@ -25,26 +25,27 @@ const styles = {
         margin: '10%',
         padding: '10px',
         marginLeft: '40%',
+        marginTop: '20%',
         // textShadow: '1px 0 #000000, -1px 0 #000000, 0 1px #000000, 0 -1px #000000, 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000'
     },
     textDisplay: {
         display: 'flex',
         float: 'left'
     },
-    navHeight: {
+    navStyle: {
         minHeight: '100px',
     },
     buttonStyle: {
-        display: 'flex',
-        alignItems: 'flex-end',
         textTransform: 'none',
         backgroundColor: '#151E3F',
         color: '#ffffff',
+        margin: '10px',
     },
     buttonAlign: {
-        justifyContent: 'end'
+        display: 'row',
+        float: 'right',
+        padding: '35px',
     }
-    //^^ to be put on the div the buttons are in
 };
 
 const Header = () => {
@@ -55,7 +56,7 @@ const Header = () => {
     return (
         <ThemeProvider theme={theme}>
         <AppBar position='static' color='primary'>
-        <header style={styles.navHeight}>
+        <header style={styles.navStyle}>
             <div>
                 <div style={styles.textDisplay}>
                     <Link href='/' underline='none' color={'#E8871E'} >
@@ -65,14 +66,26 @@ const Header = () => {
                     </Link>
                 </div>
             </div>
-            <div>
+            <div style={styles.buttonAlign}>
                 {AuthUtil.loggedIn() ? (
                   <>
-                    <Link to='/homepage'>
-                        <Button variant='contained' style={styles.buttonStyle}>Home</Button>
+                    <Link
+                        href='/HomePage'
+                        underline='none'
+                        component={Button}
+                        variant='contained'
+                        style={styles.buttonStyle}
+                        >
+                            Home
                     </Link>
-                    <Link to='/profile'>
-                        <Button variant='contained' style={styles.buttonStyle}>Profile</Button>
+                    <Link
+                        href='/UserProfile'
+                        underline='none'
+                        component={Button}
+                        variant='contained'
+                        style={styles.buttonStyle}
+                        >
+                            Profile
                     </Link>
                     <Button onClick={logout} variant='contained' style={styles.buttonStyle}>Logout</Button>
                   </>
