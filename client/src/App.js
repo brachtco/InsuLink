@@ -47,7 +47,7 @@ function App() {
     <ApolloProvider client={client}>
     <Router>
       <Header />
-      <Container disableGutters='true' maxWidth='false' style={{ height: "100vh", position: "relative" }} >
+      <Container maxWidth='false' style={{ height: "100vh", position: "relative" }} >
         <Container style={{ paddingBottom: '5rem', minHeight: '100%'}}>
         <Routes>
           <Route
