@@ -6,8 +6,16 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import Button from '@mui/material/Button';
+// import { useQuery } from "@apollo/client";
+// import { QUERY_ME } from '../utils/queries';
 
 function UserProfile() {
+
+    //TODO START: This is for testing only, need to delete when done
+    // const { data, loading } = useQuery(QUERY_ME);
+    // const myProfile = data?.myProfile || [];
+    // console.log(myProfile);
+    //TODO END: This is for testing only, need to delete when done
 
     const [profileName, setName] = useState('');
     const [profileGender, setGender] = useState('');
