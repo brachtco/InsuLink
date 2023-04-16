@@ -35,6 +35,10 @@ export const QUERY_USERS = gql`
                 email
                 firstName
                 lastName
+                gender
+                age
+                hometown
+                interests
             }
         }
     `;
