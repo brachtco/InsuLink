@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function HomePage() {
 
     return (
-        <div id="HomePage" style={{ height: "100vh", position: "relative" }}>
+        <div id="HomePage" style={{ minHeight: "100vh", position: "relative" }}>
 
             <div id="selectRegion" style={{ display: "flex", justifyContent: "center", marginBottom: "50px", marginTop: "50px" }}>
                 <h1>Select Region...</h1>

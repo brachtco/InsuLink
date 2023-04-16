@@ -1,8 +1,5 @@
-// const mongoose = require('mongoose');
-
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-const School = require('./School');
 
 const userSchema = new Schema({
   firstName: {
@@ -34,6 +31,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
     unique: true,
+    match: [/.+@.+\..+/, 'Please provide a valid email address.'],
   },
   password: {
     type: String,
@@ -42,8 +40,8 @@ const userSchema = new Schema({
   },
   school: {
     type: Schema.Types.ObjectId,
-    ref: 'School'
-  }
+    ref: 'School',
+  },
 });
 
 userSchema.pre('save', async function (next) {
@@ -56,7 +54,7 @@ userSchema.pre('save', async function (next) {
 });
 
 userSchema.methods.isCorrectPassword = async function (password) {
-  await bcrypt.compare(password, this.password);
+  return bcrypt.compare(password, this.password);
 };
 
 const User = model('User', userSchema);

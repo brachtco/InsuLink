@@ -4,19 +4,24 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    //unsure if this is good
-    user: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user.id).populate('school');
-
-        return user;
-      }
-
-      throw new AuthenticationError('Not logged in');
+    user: async (parent, { email }) => {
+     return User.findOne({ email }).populate('school');
     },
-    school: async () => {
-        return await School.find({}).populate('users');
-      },
+    users: async () => {
+      return User.find().populate('school');
+    },
+    school: async (parent, { schoolId }) => {
+      return  School.findOne({ _id: schoolId }).populate('users');
+    },
+    schools: async () => {
+      return School.find().populate('users');
+    },
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id }).populate('school');
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
   //
   Mutation: {
@@ -27,7 +32,7 @@ const resolvers = {
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {
-        return User.findByIdAndUpdate(context.user.id, args, {
+        return User.findByIdAndUpdate(context.user._id, args, {
           new: true,
         });
       }

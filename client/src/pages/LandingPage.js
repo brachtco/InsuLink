@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Button from '@mui/material/Button';
 
 const styles = {
@@ -18,7 +17,7 @@ function LandingPage() {
 
     return (
         <div id="landingPage" 
-        style={{ height: "100vh", position: "relative"}}>
+        style={{ minHeight: "100vh", position: "relative"}}>
 
             <div style={{ display: "flex", justifyContent: "center"}}>
                 <img src="/insulinkLogoWithName.png" alt="Insulink Branded Logo" 
