@@ -6,18 +6,17 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import Button from '@mui/material/Button';
-// import { useQuery } from "@apollo/client";
-// import { QUERY_ME } from '../utils/queries';
+import { useQuery } from "@apollo/client";
+import { QUERY_ME } from '../utils/queries';
 
 function UserProfile() {
 
-    //TODO START: This is for testing only, need to delete when done
-    // const { data, loading } = useQuery(QUERY_ME);
-    // const myProfile = data?.myProfile || [];
-    // console.log(myProfile);
-    //TODO END: This is for testing only, need to delete when done
+    // Query "me" from the resolvers, to display my profile data to the page
+    const { data } = useQuery(QUERY_ME);
+    const myProfile = data?.me || [];
 
-    const [profileName, setName] = useState('');
+    const [profileFirstName, setFirstName] = useState('');
+    const [profileLastName, setLastName] = useState('');
     const [profileGender, setGender] = useState('');
     const [profileAge, setAge] = useState('');
     const [profileHometown, setHometown] = useState('');
@@ -32,9 +31,12 @@ function UserProfile() {
         const inputValue = target.value;
 
         // Based on the input type, we set the state
-        if (inputType === 'profileName') {
-            setName(inputValue);
+        if (inputType === 'profileFirstName') {
+            setFirstName(inputValue);
         }
+        else if (inputType === 'profileLastName') {
+            setLastName(inputValue);
+        }        
         else if (inputType === 'profileGender') {
             setGender(inputValue);
         }
@@ -59,11 +61,16 @@ function UserProfile() {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
 
-        // Check Name
-        if (!profileName) {
-            alert('Full name is required!');
+        // Check First Name
+        if (!profileFirstName) {
+            alert('First name is required!');
             return;
         }
+        // Check Age
+        else if (!profileLastName) {
+            alert('Last name is required!');
+            return;
+        }        
         // Check Age
         else if (!profileAge) {
             alert('Age is required!');
@@ -96,7 +103,7 @@ function UserProfile() {
         } else {
             //TODO: Need to actually store this data in the database.
             alert(`
-            Hello ${profileName}, 
+            Hello ${profileFirstName} ${profileLastName}, 
             gender: ${profileGender}, 
             age ${profileAge}, 
             hometown of ${profileHometown}, 
@@ -121,6 +128,7 @@ function UserProfile() {
                 >
                     {/* First Name */}
                     <TextField
+                        value={ myProfile.firstName ? myProfile.firstName : '' }
                         id="outlined-basic"
                         label="First Name"
                         variant="outlined"
@@ -130,6 +138,7 @@ function UserProfile() {
 
                     {/* Last Name  */}
                     <TextField
+                        value={ myProfile.lastName ? myProfile.lastName : '' }
                         id="outlined-basic"
                         label="Last Name"
                         variant="outlined"
@@ -139,6 +148,7 @@ function UserProfile() {
 
                     {/* Age */}
                     <TextField
+                        value={ myProfile.age ? myProfile.age : '' }
                         id="outlined-number"
                         label="Age"
                         type="number"
@@ -151,6 +161,7 @@ function UserProfile() {
 
                     {/* Hometown */}
                     <TextField
+                        value={ myProfile.hometown ? myProfile.hometown : '' }
                         id="outlined-basic"
                         label="Hometown"
                         variant="outlined"
@@ -160,6 +171,7 @@ function UserProfile() {
 
                     {/* Hobbies */}
                     <TextField
+                        value={ myProfile.interests ? myProfile.interests : '' }
                         id="outlined-multiline-static"
                         label="Hobbies"
                         name="profileHobbies"
@@ -175,10 +187,10 @@ function UserProfile() {
                         name="profileGender"
                         onChange={handleInputChange}
                     >
-                        <FormControlLabel value="female" control={<Radio />} label="Female" />
-                        <FormControlLabel value="male" control={<Radio />} label="Male" />
-                        <FormControlLabel value="other" control={<Radio />} label="Other" />
-                        <FormControlLabel value="hidden" control={<Radio />} label="Rather Not Say" />
+                        <FormControlLabel value="female" control={<Radio />} label="Female" checked={ myProfile.gender === "Female" ? true : false } />
+                        <FormControlLabel value="male" control={<Radio />} label="Male" checked={ myProfile.gender === "Male" ? true : false } />
+                        <FormControlLabel value="other" control={<Radio />} label="Other" checked={ myProfile.gender === "Other" ? true : false } />
+                        <FormControlLabel value="hidden" control={<Radio />} label="Rather Not Say" checked={ myProfile.gender === "Rather Not Say" ? true : false } />
                     </RadioGroup>
 
                     {/* Smoke? */}
