@@ -27,7 +27,6 @@ function LandingPage() {
             <br></br>
 
             <div style={{ display: "flex", justifyContent: "center"}}>
-                {/* TODO: Make this button take you to homepage  */}
                 <Link to="/HomePage" className="btn btn-primary">
                     <Button variant='contained' style={styles.buttonStyle}>
                         Get Started...
@@ -36,22 +35,10 @@ function LandingPage() {
             </div>
 
             <div style={{ display: "flex", justifyContent: "center"}}>
-                {/* TODO: Make this button take you to either login/signup */}
-                <Link to="/UserProfile" className="btn btn-primary">User Profile/Settings</Link>
-            </div>            
-
-            <div style={{ display: "flex", justifyContent: "center"}}>
-                {/* TODO: Make this button take you to selected student */}
-                <Link to="/SelectedStudent" className="btn btn-primary">Selected Student</Link>
-            </div>  
-
-            <div style={{ display: "flex", justifyContent: "center"}}>
-                {/* TODO: Make this button take you to homepage  */}
                 <Link to="/Login" className="btn btn-primary">Login..</Link>
             </div>
 
             <div style={{ display: "flex", justifyContent: "center"}}>
-                {/* TODO: Make this button take you to homepage  */}
                 <Link to="/Signup" className="btn btn-primary">Signup...</Link>
             </div>       
 
