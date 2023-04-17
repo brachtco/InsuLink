@@ -24,9 +24,9 @@ function SelectedStudent() {
         e.preventDefault();
 
         //TODO: Need to actually send the student a message.
-        alert(`You are now connected to this student!`);      
+        alert(`You are now connected to this student!`);
 
-    };    
+    };
 
     return (
         <div id="student" style={{ display: "flex", justifyContent: "space-between", marginTop: "50px" }}>
@@ -42,73 +42,79 @@ function SelectedStudent() {
                 >
                     {/* Name */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Name"
-                        variant="filled"
                         name="studentName"
+                        variant="standard"
                         value={(userProfile.firstName && userProfile.lastName) ? (userProfile.firstName + ' ' + userProfile.lastName) : ""}
                         style={{ color: '#000' }}
+                        InputProps={{
+                            readOnly: true,
+                        }}
                     />
 
                     {/* Age */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Age"
-                        variant="filled"
                         name="studentName"
+                        variant="standard"
                         value={userProfile.age ?? ""}
+                        InputProps={{
+                            readOnly: true,
+                        }}
                     />
 
                     {/* Hometown */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Hometown"
-                        variant="filled"
                         name="studentHometown"
+                        variant="standard"
                         value={userProfile.hometown ?? ""}
+                        InputProps={{
+                            readOnly: true,
+                        }}
                     />
 
                     {/* Hobbies */}
                     <TextField
-                        disabled
                         id="filled-multiline-static"
                         label="Hobbies"
+                        variant="standard"
                         multiline
-                        rows={4}
-                        variant="filled"
+                        rows={2}
                         value={userProfile.interests ?? ""}
+                        InputProps={{
+                            readOnly: true,
+                        }}
                     />
 
                     {/* Gender */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Gender"
-                        variant="filled"
                         name="studentGender"
+                        variant="standard"
                         value={userProfile.gender ?? ""}
-                    />                    
+                        InputProps={{
+                            readOnly: true,
+                        }}
+                    />
 
                     {/* Smoke? */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Smoke?"
-                        variant="filled"
                         name="studentSmoke"
-                    />                            
+                    />
 
                     {/* Drink? */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Drink?"
-                        variant="filled"
                         name="studentDrink"
-                    />                            
+                    />
 
                     {/* Connect button */}
                     <Button variant="contained" onClick={handleStudentConnect}>Connect!</Button>
