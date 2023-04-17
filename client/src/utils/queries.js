@@ -39,6 +39,7 @@ export const QUERY_USERS = gql`
                 age
                 hometown
                 interests
+                photo
             }
         }
     `;

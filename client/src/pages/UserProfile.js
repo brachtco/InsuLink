@@ -224,7 +224,7 @@ function UserProfile() {
 
             <div id="profilePicture">
                 <img
-                    src="/profilePic.jpg"
+                    src={myProfile.photo}
                     alt="Profile Pic"
                     style={{ height: "500px", border: "2px solid black", borderRadius: "5px", padding: "10px" }}
                 />

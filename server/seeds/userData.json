@@ -9,7 +9,8 @@
         "interests": "Piano, Baseball, Gaming",
         "password": "password",
         "Smoke": "No",
-        "Drink": "No"
+        "Drink": "No",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -22,7 +23,8 @@
         "interests": "Dance, Soccer, Crossword Puzzles",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkFemale.jpeg"
     },
 
     {
@@ -35,7 +37,8 @@
         "interests": "Snowboarding, Animation, Bass Guitar",
         "password": "password",
         "Smoke": "Yes",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -48,7 +51,8 @@
         "interests": "Biking, Gaming, Art",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -61,7 +65,8 @@
         "interests": "Lacrosse, Singing, Camping",
         "password": "password",
         "Smoke": "No",
-        "Drink": "No"
+        "Drink": "No",
+        "photo": "/assets/images/InsulinkFemale.jpeg"
     },
 
     {
@@ -74,7 +79,8 @@
         "interests": "Surfing, Golf, Cooking",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -87,7 +93,8 @@
         "interests": "Piano, Filmaker, Biking",
         "password": "password",
         "Smoke": "No",
-        "Drink": "No"
+        "Drink": "No",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -100,7 +107,8 @@
         "interests": "Volleyball, Debate, Motocross",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkFemale.jpeg"
     },
 
     {
@@ -113,7 +121,8 @@
         "interests": "Football, Fly Fishing, Math",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -126,7 +135,8 @@
         "interests": "Wake Boarding, Soccer, Art",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkFemale.jpeg"
     },
 
     {
@@ -139,7 +149,8 @@
         "interests": "Basketball. Mountain Biking, Coding",
         "password": "password",
         "Smoke": "No",
-        "Drink": "No"
+        "Drink": "No",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -152,7 +163,8 @@
         "interests": "Golf, Rafting, Cello",
         "password": "password",
         "Smoke": "No",
-        "Drink": "No"
+        "Drink": "No",
+        "photo": "/assets/images/InsulinkFemale.jpeg"
     },
 
     {
@@ -165,7 +177,8 @@
         "interests": "Sailing, Lacrosse, Chemistry",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -178,7 +191,8 @@
         "interests": "Photography, Football, Go Kart Racing",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkMale.jpg"
     },
 
     {
@@ -191,7 +205,8 @@
         "interests": "Soccer, Clarinet, Graphic Desgin",
         "password": "password",
         "Smoke": "No",
-        "Drink": "Yes"
+        "Drink": "Yes",
+        "photo": "/assets/images/InsulinkFemale.jpeg"
     },
 
     {
@@ -204,6 +219,7 @@
         "interests": "Hockey, Canoeing, Chemistry",
         "password": "password",
         "Smoke": "No",
-        "Drink": "No"
+        "Drink": "No",
+        "photo": "/assets/images/InsulinkMale.jpg"
     }
 ]

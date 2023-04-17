@@ -20,6 +20,7 @@ const typeDefs = gql`
     email: String
     password: String
     school: [School]
+    photo: String
   }
 
   type Auth {
