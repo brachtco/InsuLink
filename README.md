@@ -16,34 +16,23 @@ Materialize UI (CSS Library)
 MongoDB/Mongoose  
 GraphQL
 
-## Wireframes/Finished App
+## Wireframes
 
-Landing Page (wireframe)...
 ![image](https://user-images.githubusercontent.com/25781123/232362904-e05ca12d-c98b-4d29-804c-feb637266d92.png)
 
-
-
-Login/Signup...
 ![image](https://user-images.githubusercontent.com/25781123/232362930-debd2157-6c57-487c-8a97-82a927a3f865.png)
 
-Homepage...
 ![image](https://user-images.githubusercontent.com/25781123/232362984-4f078790-0c48-4b02-bcef-c9c1bcf9009e.png)
 
-Western Schools...
 ![image](https://user-images.githubusercontent.com/25781123/232363016-1152cfbe-4929-43e2-9e8f-0d16ab005238.png)
 
-Eastern Schools...
 ![image](https://user-images.githubusercontent.com/25781123/232363062-2b091fd8-b6e4-48dd-91aa-af85c19eb2d6.png)
 
-Selected School...
 ![image](https://user-images.githubusercontent.com/25781123/232363100-5f7d0650-4833-4cf4-8478-438218da1d98.png)
 
-Selected Student...
 ![image](https://user-images.githubusercontent.com/25781123/232363134-0b948fce-f933-43a3-92fc-8f449dc2a42c.png)
 
-User profile/settings...
 ![image](https://user-images.githubusercontent.com/25781123/232363171-1c3b423f-8a00-4489-bafe-0498aff877ac.png)
-
 
 ## License
 
