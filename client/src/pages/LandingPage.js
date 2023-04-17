@@ -7,6 +7,8 @@ const styles = {
         textTransform: 'none',
         backgroundColor: '#151E3F',
         color: '#ffffff',
+        paddingLeft: "100px",
+        paddingRight: '100px',
         // '&:hover': {
         //     backgroundColor: '#334999',
         // },
@@ -21,7 +23,7 @@ function LandingPage() {
 
             <div style={{ display: "flex", justifyContent: "center"}}>
                 <img src="/insulinkLogoWithName.png" alt="Insulink Branded Logo" 
-                style={{ height: "500px", padding: '20px', margin: '10%' }} />
+                style={{ height: "350px", padding: '20px', margin: '3%' }} />
             </div>
 
             <br></br>
