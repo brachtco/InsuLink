@@ -9,10 +9,11 @@ import { useParams } from 'react-router-dom';
 function SelectedStudent() {
 
     //TODO: Need to query the DB for the selected student and bring their data to the page.
-
     const { id: userParam } = useParams();
+    console.log('userParam: ', userParam)
 
     const { data } = useQuery(QUERY_USER, { variables: { id: userParam } });
+    console.log('data: ', data)
 
     const userProfile = data?.user || {};
 
@@ -28,7 +29,7 @@ function SelectedStudent() {
     };    
 
     return (
-        <div id="student" style={{ display: "flex", justifyContent: "space-between" }}>
+        <div id="student" style={{ display: "flex", justifyContent: "space-between", marginTop: "50px" }}>
             <div id="selectedStudent">
                 <FormControl
                     component="form"
@@ -47,6 +48,7 @@ function SelectedStudent() {
                         variant="filled"
                         name="studentName"
                         value={(userProfile.firstName && userProfile.lastName) ? (userProfile.firstName + ' ' + userProfile.lastName) : ""}
+                        style={{ color: '#000' }}
                     />
 
                     {/* Age */}
@@ -77,7 +79,7 @@ function SelectedStudent() {
                         multiline
                         rows={4}
                         variant="filled"
-                        value={userProfile.hobbies ?? ""}
+                        value={userProfile.interests ?? ""}
                     />
 
                     {/* Gender */}

@@ -40,7 +40,7 @@ function SelectedSchool() {
                             return (
                                 <Card sx={{ maxWidth: 345 }} key={student._id} style={{width: "500px"}}>
                                     <CardActionArea>
-                                        <Link to={`/SelectedStudent/${student.id}`} style={{ textDecoration: 'none' }}>
+                                        <Link to={`/SelectedStudent/${student._id}`} style={{ textDecoration: 'none' }}>
                                             <CardMedia
                                                 component="img"
                                                 height="250"
