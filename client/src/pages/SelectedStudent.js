@@ -10,14 +10,10 @@ function SelectedStudent() {
 
     //TODO: Need to query the DB for the selected student and bring their data to the page.
     const { id: userParam } = useParams();
-    console.log('userParam: ', userParam)
 
     const { data } = useQuery(QUERY_USER, { variables: { id: userParam } });
-    console.log('data: ', data)
 
     const userProfile = data?.user || {};
-
-    console.log('userProfile: ', userProfile)
 
     const handleStudentConnect = (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
