@@ -2,22 +2,30 @@ import React from 'react';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
+import { useQuery } from "@apollo/client";
+import { QUERY_USER } from '../utils/queries';
+import { useParams } from 'react-router-dom';
 
 function SelectedStudent() {
 
     //TODO: Need to query the DB for the selected student and bring their data to the page.
+    const { id: userParam } = useParams();
+
+    const { data } = useQuery(QUERY_USER, { variables: { id: userParam } });
+
+    const userProfile = data?.user || {};
 
     const handleStudentConnect = (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
 
         //TODO: Need to actually send the student a message.
-        alert(`You are now connected to this student!`);      
+        alert(`You are now connected to this student!`);
 
-    };    
+    };
 
     return (
-        <div id="student" style={{ display: "flex", justifyContent: "space-between" }}>
+        <div id="student" style={{ display: "flex", justifyContent: "space-between", marginTop: "50px" }}>
             <div id="selectedStudent">
                 <FormControl
                     component="form"
@@ -30,67 +38,79 @@ function SelectedStudent() {
                 >
                     {/* Name */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Name"
-                        variant="filled"
                         name="studentName"
+                        variant="standard"
+                        value={(userProfile.firstName && userProfile.lastName) ? (userProfile.firstName + ' ' + userProfile.lastName) : ""}
+                        style={{ color: '#000' }}
+                        InputProps={{
+                            readOnly: true,
+                        }}
                     />
 
                     {/* Age */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Age"
-                        variant="filled"
                         name="studentName"
+                        variant="standard"
+                        value={userProfile.age ?? ""}
+                        InputProps={{
+                            readOnly: true,
+                        }}
                     />
 
                     {/* Hometown */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Hometown"
-                        variant="filled"
                         name="studentHometown"
+                        variant="standard"
+                        value={userProfile.hometown ?? ""}
+                        InputProps={{
+                            readOnly: true,
+                        }}
                     />
 
                     {/* Hobbies */}
                     <TextField
-                        disabled
                         id="filled-multiline-static"
                         label="Hobbies"
+                        variant="standard"
                         multiline
-                        rows={4}
-                        variant="filled"
+                        rows={2}
+                        value={userProfile.interests ?? ""}
+                        InputProps={{
+                            readOnly: true,
+                        }}
                     />
 
                     {/* Gender */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Gender"
-                        variant="filled"
                         name="studentGender"
-                    />                    
+                        variant="standard"
+                        value={userProfile.gender ?? ""}
+                        InputProps={{
+                            readOnly: true,
+                        }}
+                    />
 
                     {/* Smoke? */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Smoke?"
-                        variant="filled"
                         name="studentSmoke"
-                    />                            
+                    />
 
                     {/* Drink? */}
                     <TextField
-                        disabled
                         id="outlined-basic"
                         label="Drink?"
-                        variant="filled"
                         name="studentDrink"
-                    />                            
+                    />
 
                     {/* Connect button */}
                     <Button variant="contained" onClick={handleStudentConnect}>Connect!</Button>
@@ -101,7 +121,7 @@ function SelectedStudent() {
 
             <div id="profilePicture">
                 <img
-                    src="/studentPic.jpg"
+                    src={userProfile.photo ?? ""}
                     alt="Student Pic"
                     style={{ height: "500px", border: "2px solid black", borderRadius: "5px", padding: "10px" }}
                 />

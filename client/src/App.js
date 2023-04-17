@@ -63,7 +63,7 @@ function App() {
             element={<UserProfile />}
           />
           <Route
-            path="/SelectedStudent"
+            path="/SelectedStudent/:id"
             element={<SelectedStudent />}
           />
           <Route
