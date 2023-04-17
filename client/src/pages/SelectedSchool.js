@@ -8,44 +8,22 @@ import { CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
+import { useQuery } from "@apollo/client";
+import { QUERY_USERS } from '../utils/queries';
 
 function SelectedSchool() {
 
+    const { data } = useQuery(QUERY_USERS);
+    const getUsers = data?.users || [];
+
+    getUsers.map(users => {
+        return (
+            console.log("getUsers users",users)
+        )
+    })
+
     const location = useLocation();
     const CollegeName = location.state.collegeName;
-
-    const students = [
-        {
-            id: 1,
-            firstName: "John",
-            lastName: "Johnson",
-            age: "22",
-            gender: "Male",
-            interests: "Paddle tennis, art, and bikes",
-            hometown: "Logan, UT",
-            img: "/assets/images/InsulinkMale.jpg"
-        },
-        {
-            id: 2,
-            firstName: "Kate",
-            lastName: "Kateson",
-            age: "33",
-            gender: "Female",
-            interests: "Fly fishing, guitars, and music",
-            hometown: "Provo, UT",
-            img: "/assets/images/InsulinkFemale.jpeg"
-        },
-        {
-            id: 3,
-            firstName: "Mike",
-            lastName: "Mikeson",
-            age: "44",
-            gender: "Male",
-            interests: "Beer, food, and sports",
-            hometown: "SLC, UT",
-            img: "/assets/images/InsulinkMale.jpg"
-        }
-    ];
 
     return (
         <div id="selectStudent" style={{ minHeight: "100vh", position: "relative" }}>
@@ -58,15 +36,15 @@ function SelectedSchool() {
 
                 <Box sx={{ width: '100%' }}>
                     <Stack spacing={6} alignItems="center">
-                        {students.map(student => {
+                        {getUsers.map(student => {
                             return (
-                                <Card sx={{ maxWidth: 345 }} key={student.id} style={{width: "500px"}}>
+                                <Card sx={{ maxWidth: 345 }} key={student._id} style={{width: "500px"}}>
                                     <CardActionArea>
-                                        <Link to="/SelectedStudent" style={{ textDecoration: 'none' }}>
+                                        <Link to={`/SelectedStudent/${student._id}`} style={{ textDecoration: 'none' }}>
                                             <CardMedia
                                                 component="img"
                                                 height="250"
-                                                image={student.img}
+                                                image={student.photo}
                                                 alt="profile pic"
                                             />
                                             <CardContent>
@@ -88,7 +66,6 @@ function SelectedSchool() {
                                             </CardContent>
                                         </Link>
                                     </CardActionArea>
-
                                 </Card>
                             )
                         })}
