@@ -1,5 +1,7 @@
 # InsuLink
 
+![image](https://user-images.githubusercontent.com/25781123/232363354-b58d041c-8d56-49ab-a013-a73e9bf91f08.png)
+
 ## Description
 
 A social media app that allows prospective college students with Type 1 Diabetes to look for other T1D potential roommates who have committed to the school and allow them to connect and entertain living together before arrival.  The benefit of the app is so that they can assist each other in the event of diabetes complications at any given time.
