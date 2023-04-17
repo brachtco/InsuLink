@@ -115,7 +115,7 @@ function UserProfile() {
     };
 
     return (
-        <div id="profile" style={{ display: "flex", justifyContent: "space-between" }}>
+        <div id="profile" style={{ display: "flex", justifyContent: "space-between", marginTop: "50px" }}>
             <div id="profileSettings">
                 <FormControl
                     component="form"
