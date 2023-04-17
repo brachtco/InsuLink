@@ -29,7 +29,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    user(email: String!): User
+    user(_id: ID!): User
     users: [User]
     school(_id: ID!): School
     schools: [School]

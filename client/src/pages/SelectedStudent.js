@@ -2,10 +2,22 @@ import React from 'react';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
+import { useQuery } from "@apollo/client";
+import { QUERY_USER } from '../utils/queries';
+import { useParams } from 'react-router-dom';
 
 function SelectedStudent() {
 
     //TODO: Need to query the DB for the selected student and bring their data to the page.
+    const { id: userParam } = useParams();
+    console.log('userParam: ', userParam)
+
+    const { data } = useQuery(QUERY_USER, { variables: { id: userParam } });
+    console.log('data: ', data)
+
+    const userProfile = data?.user || {};
+
+    console.log('userProfile: ', userProfile)
 
     const handleStudentConnect = (e) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
@@ -17,7 +29,7 @@ function SelectedStudent() {
     };    
 
     return (
-        <div id="student" style={{ display: "flex", justifyContent: "space-between" }}>
+        <div id="student" style={{ display: "flex", justifyContent: "space-between", marginTop: "50px" }}>
             <div id="selectedStudent">
                 <FormControl
                     component="form"
@@ -35,6 +47,8 @@ function SelectedStudent() {
                         label="Name"
                         variant="filled"
                         name="studentName"
+                        value={(userProfile.firstName && userProfile.lastName) ? (userProfile.firstName + ' ' + userProfile.lastName) : ""}
+                        style={{ color: '#000' }}
                     />
 
                     {/* Age */}
@@ -44,6 +58,7 @@ function SelectedStudent() {
                         label="Age"
                         variant="filled"
                         name="studentName"
+                        value={userProfile.age ?? ""}
                     />
 
                     {/* Hometown */}
@@ -53,6 +68,7 @@ function SelectedStudent() {
                         label="Hometown"
                         variant="filled"
                         name="studentHometown"
+                        value={userProfile.hometown ?? ""}
                     />
 
                     {/* Hobbies */}
@@ -63,6 +79,7 @@ function SelectedStudent() {
                         multiline
                         rows={4}
                         variant="filled"
+                        value={userProfile.interests ?? ""}
                     />
 
                     {/* Gender */}
@@ -72,6 +89,7 @@ function SelectedStudent() {
                         label="Gender"
                         variant="filled"
                         name="studentGender"
+                        value={userProfile.gender ?? ""}
                     />                    
 
                     {/* Smoke? */}
@@ -101,7 +119,7 @@ function SelectedStudent() {
 
             <div id="profilePicture">
                 <img
-                    src="/studentPic.jpg"
+                    src={userProfile.photo ?? ""}
                     alt="Student Pic"
                     style={{ height: "500px", border: "2px solid black", borderRadius: "5px", padding: "10px" }}
                 />

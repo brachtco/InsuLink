@@ -17,6 +17,22 @@ export const QUERY_USERS = gql`
     }
     `;
 
+export const QUERY_USER = gql`
+    query getUser($id: ID!) {
+        user(_id: $id) {
+            _id
+            email
+            firstName
+            lastName
+            gender
+            age
+            hometown
+            interests
+            photo
+        }
+    }
+`;
+
     export const QUERY_SCHOOLS =gql`
         query getSchools {
             school {
