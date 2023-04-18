@@ -34,6 +34,22 @@ GraphQL
 
 ![image](https://user-images.githubusercontent.com/25781123/232363171-1c3b423f-8a00-4489-bafe-0498aff877ac.png)
 
+## Screenshots
+
+![Screenshot 2023-04-17 at 7 43 49 PM](https://user-images.githubusercontent.com/17559972/232649284-ea831bd7-dbd7-4071-83a1-4b92cc860b74.png)
+
+![Screenshot 2023-04-17 at 7 44 27 PM](https://user-images.githubusercontent.com/17559972/232649335-60c3db81-b309-4ffe-9f1b-e43f2281c43c.png)
+
+![Screenshot 2023-04-17 at 7 45 06 PM](https://user-images.githubusercontent.com/17559972/232649370-268d3904-4404-4646-a576-8df2cb089a11.png)
+
+![Screenshot 2023-04-17 at 7 46 51 PM](https://user-images.githubusercontent.com/17559972/232649387-e1698d51-efc4-4756-bc25-f043f166bac6.png)
+
+![Screenshot 2023-04-17 at 7 47 47 PM](https://user-images.githubusercontent.com/17559972/232649404-43c62805-2c84-4ee9-9228-0653704b0aae.png)
+
+![Screenshot 2023-04-17 at 7 48 17 PM](https://user-images.githubusercontent.com/17559972/232649419-5c388229-39c2-4cf1-8c7d-9e3dca359444.png)
+
+![Screenshot 2023-04-17 at 7 49 36 PM](https://user-images.githubusercontent.com/17559972/232649444-eda28592-3db0-4c0b-a154-09eb613229b2.png)
+
 ## License
 
 MIT    
